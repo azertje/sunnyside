@@ -98,6 +98,7 @@ select {
 /* Attribution */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: var(--dark-desaturated-cyan); }
+.attribution a:hover { color: #fff; }
 
 /* Navigation */
 .sr-only {
@@ -143,6 +144,26 @@ header {
 .primary-navigation a > [aria-hidden="true"] {
     font-weight: 700;
     margin-inline-end: .25em;
+}
+
+.contact-link {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Fraunces', system-ui, sans-serif;
+  font-size: .9rem;
+  transition: 300ms;
+}
+.contact-link span {
+  color: var(--very-dark-grayish-blue);
+  transition: 300ms;
+}
+.contact-link:hover {
+  background-color: #6FCFFF;
+}
+.contact-link:hover span {
+  color: #fff;
 }
 
 /* Hero section */
@@ -220,6 +241,10 @@ h2 {
   left: 0;
   bottom: 5%;
   z-index: -1;
+  transition: 300ms;
+}
+.learn-more-link:hover::after {
+  opacity: 100%;
 }
 .soft-red::after {
   content: '';
@@ -328,12 +353,22 @@ footer p{
 .footer-links a {
   color: #2C7566;
   text-decoration: none;
+  transition: 300ms;
+}
+.footer-links a:hover {
+  color: #fff;
 }
 .footer-socials {
   display: flex;
   justify-content: space-between;
   max-width: 12rem;
   margin: 4rem auto;
+}
+.footer-socials svg path {
+  transition: 300ms;
+}
+.footer-socials svg:hover path{
+  fill: #fff;
 }
 
 @media (max-width: 767px) {
@@ -375,6 +410,15 @@ footer p{
 
     .mobile-nav-toggle[aria-expanded="true"] {
         background-image: url('images/icon-close.svg');
+    }
+    .contact-link {
+      background-color: var(--yellow);
+    }
+    .contact-link:hover {
+      background-color: var(--yellow);
+    }
+    .contact-link:hover span {
+      color: var(--very-dark-grayish-blue);
     }
     .desktop-img {
       display: none;
